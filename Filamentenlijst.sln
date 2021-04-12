@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31129.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp.Android", "TestApp.Android\TestApp.Android.csproj", "{35A536C4-FFA1-400A-B8CD-07EA49E541B3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filamentenlijst.Android", "TestApp.Android\Filamentenlijst.Android.csproj", "{35A536C4-FFA1-400A-B8CD-07EA49E541B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp.iOS", "TestApp.iOS\TestApp.iOS.csproj", "{8ABBB9B3-8298-498C-A071-D71EBAC4D72A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filamentenlijst.iOS", "TestApp.iOS\Filamentenlijst.iOS.csproj", "{8ABBB9B3-8298-498C-A071-D71EBAC4D72A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestApp", "TestApp\TestApp.csproj", "{3422C6F2-B708-4358-A71F-BF49EA5D460B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Filamentenlijst", "TestApp\Filamentenlijst.csproj", "{3422C6F2-B708-4358-A71F-BF49EA5D460B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

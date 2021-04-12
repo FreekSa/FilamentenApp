@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TestApp.Models
+namespace Filamentenlijst.Models
 {
     public class Item
     {

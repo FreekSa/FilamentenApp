@@ -1,11 +1,13 @@
-﻿using System;
+﻿using SQLite;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace TestApp.Models
+namespace Filamentenlijst.Models
 {
     public class Filament
     {
+        [PrimaryKey, AutoIncrement]
         public int Id { get; set; }
         public string Type { get; set; }
         public string Kleur { get; set; }

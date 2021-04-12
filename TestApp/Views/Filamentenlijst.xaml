@@ -1,7 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TestApp.Views.Filamentenlijst">
+             xmlns:vm="clr-namespace:Filamentenlijst.ViewModels"
+             x:Class="Filamentenlijst.Views.Filamentenlijst"
+             Title="{Binding Title}">
+    
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="listView" Margin="20">
@@ -9,13 +12,18 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <Label Text="{Binding Id}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
                                 <Label Text="{Binding Type}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                                <!--<Image Source="check.png" HorizontalOptions="End" IsVisible="{Binding Done}" />-->
+                                <Label Text="{Binding Kleur}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                <Label Text="{Binding KostPerRol}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                <Label Text="{Binding AantalKg}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                <Button Text="Verwijder" Clicked="ButtonVerwijderen_Clicked" CommandParameter="{Binding Id}"></Button>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Button Text="Voeg Filament toe" Clicked="ButtonToevoegen_Clicked"></Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

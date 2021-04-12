@@ -1,10 +1,10 @@
 ﻿using System;
-using TestApp.Services;
-using TestApp.Views;
+using Filamentenlijst.Services;
+using Filamentenlijst.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace TestApp
+namespace Filamentenlijst
 {
     public partial class App : Application
     {

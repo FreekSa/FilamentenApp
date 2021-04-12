@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using TestApp.Models;
+using Filamentenlijst.Models;
 
-namespace TestApp.Services
+namespace Filamentenlijst.Services
 {
     public class MockDataStore : IDataStore<Item>
     {

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using TestApp.Models;
-using TestApp.Services;
+using Filamentenlijst.Models;
+using Filamentenlijst.Services;
 using Xamarin.Forms;
 
-namespace TestApp.ViewModels
+namespace Filamentenlijst.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {

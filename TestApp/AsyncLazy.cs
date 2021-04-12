@@ -4,7 +4,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestApp
+namespace Filamentenlijst
 {
     public class AsyncLazy<T> : Lazy<Task<T>>
     {

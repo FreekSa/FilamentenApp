@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using TestApp.Models;
+using Filamentenlijst.Models;
 
-namespace TestApp.Data
+namespace Filamentenlijst.Data
 {
     class FilamentItemDatabase
     {

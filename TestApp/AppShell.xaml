@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Shell xmlns="http://xamarin.com/schemas/2014/forms" 
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-       xmlns:local="clr-namespace:TestApp.Views"
-       Title="TestApp"
-       x:Class="TestApp.AppShell">
+       xmlns:local="clr-namespace:Filamentenlijst.Views"
+       Title="Filamentenlijst"
+       x:Class="Filamentenlijst.AppShell">
 
     <!--
         The overall app visual hierarchy is defined here, along with navigation.
@@ -78,16 +78,13 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
-    <FlyoutItem Title="About" Icon="icon_about.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
-    </FlyoutItem>
-    <FlyoutItem Title="Browse" Icon="icon_feed.png">
-        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:ItemsPage}" />
+
+    <FlyoutItem Title="Filamentenlijst" Icon="icon_feed.png">
+        <ShellContent Route="ItemsPage" ContentTemplate="{DataTemplate local:Filamentenlijst}" />
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-    <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
-    </MenuItem>
+
 
     <!--
         TabBar lets you define content that won't show up in a flyout menu. When this content is active
@@ -96,9 +93,6 @@
         content you can do so by calling 
         await Shell.Current.GoToAsync("//LoginPage");
     -->
-    <TabBar>
-        <ShellContent Route="LoginPage" ContentTemplate="{DataTemplate local:LoginPage}" />
-    </TabBar>
 
     <!-- Optional Templates 
     // These may be provided inline as below or as separate classes.
