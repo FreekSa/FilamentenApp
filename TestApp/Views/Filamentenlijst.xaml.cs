@@ -27,25 +27,9 @@ namespace Filamentenlijst.Views
             listView.ItemsSource = await database.GetItemsAsync();
         }
 
-        private void ButtonToevoegen_Clicked(object sender, EventArgs e)
+        private async void ButtonToevoegen_Clicked(object sender, EventArgs e)
         {
-            Filament filament1 = new Filament();
-            filament1.Type = "PLA";
-            filament1.AantalKg = 1;
-            filament1.Kleur = "Geel";
-            Task.Run(async () =>
-            {
-                try
-                {
-                    FilamentItemDatabase database = await FilamentItemDatabase.Instance;
-                    await database.SaveItemAsync(filament1);
-                    Dispatcher.BeginInvokeOnMainThread(OnAppearing);
-                }
-                catch (Exception ex)
-                {
-                    Trace.WriteLine(ex.ToString());
-                }
-            });
+            await Navigation.PushAsync(new VoegFilamentToe());
         }
 
         private void ButtonVerwijderen_Clicked(object sender, EventArgs e)
