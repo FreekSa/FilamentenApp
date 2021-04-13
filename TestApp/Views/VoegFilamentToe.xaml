@@ -4,9 +4,15 @@
              x:Class="Filamentenlijst.Views.VoegFilamentToe">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Type"/>
+            <Entry x:Name="Type"/>
+            <Label Text="Kleur"/>
+            <Entry x:Name="Kleur"/>
+            <Label Text="Kost per rol"/>
+            <Entry x:Name="KostPerRol" Keyboard="Numeric"/>
+            <Label Text="Aantal kg"/>
+            <Entry x:Name="AantalKg" Keyboard="Numeric"/>
+            <Button Text="Voeg filament toe" Clicked="ButtonVoegFilamentToe_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

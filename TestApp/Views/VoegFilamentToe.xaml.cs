@@ -20,18 +20,30 @@ namespace Filamentenlijst.Views
             InitializeComponent();
         }
 
-        public void Filament()
+        public void MaakInputLeeg()
         {
-            Filament filament1 = new Filament();
-            filament1.Type = "PLA";
-            filament1.AantalKg = 1;
-            filament1.Kleur = "Geel";
+            Type.Text = "";
+            Kleur.Text = "";
+            AantalKg.Text = "";
+            KostPerRol.Text = "";
+        }
+
+        private void ButtonVoegFilamentToe_Clicked(object sender, EventArgs e)
+        {
+            Filament filament = new Filament();
+            filament.Type = Type.Text;
+            filament.Kleur = Kleur.Text;
+            var aantalKgDecimal = decimal.Parse(AantalKg.Text);
+            filament.AantalKg = aantalKgDecimal;
+            var kostPerRolDecimal = decimal.Parse(KostPerRol.Text);
+            filament.KostPerRol = kostPerRolDecimal;
             Task.Run(async () =>
             {
                 try
                 {
                     FilamentItemDatabase database = await FilamentItemDatabase.Instance;
-                    await database.SaveItemAsync(filament1);
+                    await database.SaveItemAsync(filament);
+                    MaakInputLeeg();
                     Dispatcher.BeginInvokeOnMainThread(OnAppearing);
                 }
                 catch (Exception ex)

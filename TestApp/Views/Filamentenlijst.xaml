@@ -6,24 +6,25 @@
              Title="{Binding Title}">
     
     <ContentPage.Content>
-        <StackLayout>
-            <ListView x:Name="listView" Margin="20">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                                <Label Text="{Binding Id}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                                <Label Text="{Binding Type}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                                <Label Text="{Binding Kleur}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                                <Label Text="{Binding KostPerRol}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                                <Label Text="{Binding AantalKg}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
-                                <Button Text="Verwijder" Clicked="ButtonVerwijderen_Clicked" CommandParameter="{Binding Id}"></Button>
-                            </StackLayout>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <Button Text="Voeg Filament toe" Clicked="ButtonToevoegen_Clicked" />
-        </StackLayout>
+            <StackLayout>
+                <ListView x:Name="listView" Margin="20">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                    <Label Text="{Binding Id}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                    <Label Text="{Binding Type}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                    <Label Text="{Binding Kleur}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                    <Label Text="{Binding KostPerRol}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                    <Label Text="{Binding AantalKg}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                    <Label Text="{Binding AantalMeter}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
+                                    <Button Text="Verwijder" Clicked="ButtonVerwijderen_Clicked" CommandParameter="{Binding Id}"></Button>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button Text="Voeg Filament toe" Clicked="ButtonToevoegen_Clicked" />
+            </StackLayout>
     </ContentPage.Content>
 </ContentPage>
