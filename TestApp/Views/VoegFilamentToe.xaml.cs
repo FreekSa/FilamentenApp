@@ -18,6 +18,7 @@ namespace Filamentenlijst.Views
         public VoegFilamentToe()
         {
             InitializeComponent();
+            MaakInputLeeg();
         }
 
         public void MaakInputLeeg()
@@ -43,8 +44,7 @@ namespace Filamentenlijst.Views
                 {
                     FilamentItemDatabase database = await FilamentItemDatabase.Instance;
                     await database.SaveItemAsync(filament);
-                    MaakInputLeeg();
-                    Dispatcher.BeginInvokeOnMainThread(OnAppearing);
+                    await Navigation.PopAsync();
                 }
                 catch (Exception ex)
                 {
