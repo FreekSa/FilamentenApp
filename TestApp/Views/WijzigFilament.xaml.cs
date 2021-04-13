@@ -20,6 +20,15 @@ namespace Filamentenlijst.Views
         {
             InitializeComponent();
             this.filament = filament;
+            VulGegevensIn();
+        }
+
+        private void VulGegevensIn()
+        {
+            Type.Text = filament.Type;
+            Kleur.Text = filament.Kleur;
+            AantalKg.Text = filament.AantalKg.ToString();
+            KostPerRol.Text = filament.KostPerRol.ToString();
         }
         private void ButtonWijzigFilament_Clicked(object sender, EventArgs e)
         {
