@@ -7,22 +7,22 @@
     <ContentPage.Content>
             <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Always" VerticalScrollBarVisibility="Always">
             <StackLayout>
-                <ListView x:Name="listView" Margin="20">
+                <ListView x:Name="listView" Margin="10">
                     <ListView.Header>
-                                <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                                <Label Text="Type" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
-                            <Label Text="Kleur" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
-                            <Label Text="Kost per rol" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
-                            <Label Text="Aantal kg" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
-                            <Label Text="Aantal meter" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
-                            <Label Text="Wijzig" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
-                            <Label Text="Verwijder" VerticalTextAlignment="Center" HorizontalOptions="FillAndExpand"/>
+                            <StackLayout Margin="10,0,0,0" Orientation="Horizontal" HorizontalOptions="Fill">
+                                <Label Text="Type" VerticalTextAlignment="Center" HorizontalOptions="Fill"/>
+                                <Label Text="Kleur" VerticalTextAlignment="Center" HorizontalOptions="Fill"/>
+                                <Label Text="Kost per rol" VerticalTextAlignment="Center" HorizontalOptions="Fill"/>
+                                <Label Text="Aantal kg" VerticalTextAlignment="Center" HorizontalOptions="Fill"/>
+                                <Label Text="Aantal meter" VerticalTextAlignment="Center" HorizontalOptions="Fill"/>
+                                <Label Text="Wijzig" VerticalTextAlignment="Center" HorizontalOptions="Fill"/>
+                                <Label Text="Verwijder" VerticalTextAlignment="Center" HorizontalOptions="Fill"/>
                             </StackLayout>
                 </ListView.Header>
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout Margin="20,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                                <StackLayout Margin="10,0,0,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand">
                                     <Label Text="{Binding Type}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
                                     <Label Text="{Binding Kleur}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
                                     <Label Text="{Binding KostPerRol}" VerticalTextAlignment="Center" HorizontalOptions="StartAndExpand" />
