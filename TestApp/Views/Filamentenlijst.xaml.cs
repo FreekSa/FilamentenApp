@@ -16,7 +16,7 @@ namespace Filamentenlijst.Views
     {
         public Filamentenlijst()
         {
-         InitializeComponent();
+            InitializeComponent();
         }
 
         protected override async void OnAppearing()
@@ -52,9 +52,12 @@ namespace Filamentenlijst.Views
             });
         }
 
-        private void Button_Clicked(object sender, EventArgs e)
+        private async void ButtonWijzigen_Clicked(object sender, EventArgs e)
         {
-
+            FilamentItemDatabase database = await FilamentItemDatabase.Instance;
+            Button b = sender as Button;
+            var filament = await database.GetItemAsync(Convert.ToInt32(b.CommandParameter.ToString()));
+            await Navigation.PushAsync(new WijzigFilament(filament));
         }
     }
 }

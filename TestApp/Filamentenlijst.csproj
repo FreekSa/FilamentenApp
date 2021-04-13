@@ -19,4 +19,14 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Views\WijzigFilament.xaml.cs">
+      <DependentUpon>WijzigFilament.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

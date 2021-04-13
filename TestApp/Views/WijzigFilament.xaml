@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Filamentenlijst.Views.WijzigFilament">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Type"/>
+            <Entry x:Name="Type"/>
+            <Label Text="Kleur"/>
+            <Entry x:Name="Kleur"/>
+            <Label Text="Kost per rol"/>
+            <Entry x:Name="KostPerRol" Keyboard="Numeric"/>
+            <Label Text="Aantal kg"/>
+            <Entry x:Name="AantalKg" Keyboard="Numeric"/>
+            <Button Text="Wijzig filament" Clicked="ButtonWijzigFilament_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

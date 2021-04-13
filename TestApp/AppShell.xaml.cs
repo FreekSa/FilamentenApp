@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using Filamentenlijst.ViewModels;
 using Filamentenlijst.Views;
 using Xamarin.Forms;
 
