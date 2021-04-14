@@ -32,7 +32,7 @@ namespace Filamentenlijst.Views
         private void ButtonVoegFilamentToe_Clicked(object sender, EventArgs e)
         {
             Filament filament = new Filament();
-            filament.Type = Type.Text;
+            filament.Type = Type.Text.ToUpper();
             filament.Kleur = Kleur.Text;
             var aantalKgDecimal = decimal.Parse(AantalKg.Text);
             filament.AantalKg = aantalKgDecimal;
