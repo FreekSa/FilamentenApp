@@ -6,7 +6,7 @@
         <ScrollView Orientation="Vertical" HorizontalScrollBarVisibility="Always" VerticalScrollBarVisibility="Always">
             <StackLayout>
                 <Label Text="Aantal meter"/>
-                <Entry x:Name="AantalMeter"/>
+                <Entry x:Name="AantalMeter" Keyboard="Numeric"/>
                 <Label Text="Duurtijd in minuten"/>
                 <Entry x:Name="Duurtijd" Keyboard="Numeric"/>
                 <Label Text="Kost per rol"/>

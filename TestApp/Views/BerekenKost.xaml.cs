@@ -24,7 +24,8 @@ namespace Filamentenlijst.Views
                 decimal kostPerRolDecimal = decimal.Parse(KostPerRol.Text.ToString());
                 decimal aantalMeterDecimal = decimal.Parse(AantalMeter.Text.ToString());
                 decimal duurtijdInMinutenDecimal = decimal.Parse(Duurtijd.Text.ToString());
-                Kost.Text = (kostPerRolDecimal / 330) * aantalMeterDecimal + (0.0534m * (duurtijdInMinutenDecimal / 60)).ToString();
+                decimal kost = (kostPerRolDecimal / 330) * aantalMeterDecimal + (0.0534m * (duurtijdInMinutenDecimal / 60));
+                Kost.Text = $"Kost: € " + Decimal.Round(kost, 2);
             });
         }
     }
