@@ -82,6 +82,9 @@
     <FlyoutItem Title="Filamentenlijst" Icon="icon_feed.png">
         <ShellContent Route="Filamentenlijst" ContentTemplate="{DataTemplate local:Filamentenlijst}" />
     </FlyoutItem>
+    <FlyoutItem Title="Bereken kost per print" Icon="icon_feed.png">
+        <ShellContent Route="BerekenKost" ContentTemplate="{DataTemplate local:BerekenKost}" />
+    </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
 
