@@ -15,6 +15,14 @@ namespace Filamentenlijst.Views
         public BerekenKost()
         {
             InitializeComponent();
+            MaakVeldenLeeg();
+        }
+
+        public void MaakVeldenLeeg()
+        {
+            KostPerRol.Text = "";
+            AantalMeter.Text = "";
+            Duurtijd.Text = "";
         }
 
         public void BerekenKost_Clicked(object sender, EventArgs e)
@@ -26,6 +34,7 @@ namespace Filamentenlijst.Views
                 decimal duurtijdInMinutenDecimal = decimal.Parse(Duurtijd.Text.ToString());
                 decimal kost = (kostPerRolDecimal / 330) * aantalMeterDecimal + (0.0534m * (duurtijdInMinutenDecimal / 60));
                 Kost.Text = $"Kost: € " + Decimal.Round(kost, 2);
+                MaakVeldenLeeg();
             });
         }
     }
