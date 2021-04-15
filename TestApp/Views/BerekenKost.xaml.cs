@@ -16,6 +16,7 @@ namespace Filamentenlijst.Views
         {
             InitializeComponent();
             MaakVeldenLeeg();
+            Kost.Text = "";
         }
 
         public void MaakVeldenLeeg()
@@ -27,15 +28,13 @@ namespace Filamentenlijst.Views
 
         public void BerekenKost_Clicked(object sender, EventArgs e)
         {
-            Task.Run(async () =>
-            {
-                decimal kostPerRolDecimal = decimal.Parse(KostPerRol.Text.ToString());
-                decimal aantalMeterDecimal = decimal.Parse(AantalMeter.Text.ToString());
-                decimal duurtijdInMinutenDecimal = decimal.Parse(Duurtijd.Text.ToString());
-                decimal kost = (kostPerRolDecimal / 330) * aantalMeterDecimal + (0.0534m * (duurtijdInMinutenDecimal / 60));
-                Kost.Text = $"Kost: € " + Decimal.Round(kost, 2);
-                MaakVeldenLeeg();
-            });
+            Kost.Text = "";
+            decimal kostPerRolDecimal = decimal.Parse(KostPerRol.Text.ToString());
+            decimal aantalMeterDecimal = decimal.Parse(AantalMeter.Text.ToString());
+            decimal duurtijdInMinutenDecimal = decimal.Parse(Duurtijd.Text.ToString());
+            decimal kost = (kostPerRolDecimal / 330) * aantalMeterDecimal + (0.0534m * (duurtijdInMinutenDecimal / 60));
+            Kost.Text = $"Kost: € " + Decimal.Round(kost, 2);
+            MaakVeldenLeeg();
         }
     }
 }
